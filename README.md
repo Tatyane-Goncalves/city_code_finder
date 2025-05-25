@@ -37,11 +37,14 @@ buscacep/
 ├── main.py # Arquivo principal (entrypoint)
 ├── cep.py # Classe principal para CEP
 ├── api_client.py # Lida com requisições à API
-├── validador.py # Valida CEPs digitados
+├── validator.py # Valida CEPs digitados
 ├── endereco.py # Classe que representa os dados do endereço
 ├── utils.py # Funções auxiliares (opcional)
-├── tests/ # Testes automatizados (opcional)
-│    └── test_cep.py
+├── tests/ # Testes automatizados
+│    ├── test_address.py
+│    ├── test_api_client.py
+│    ├── test_cep.py
+│    └── test_validator.py
 └── README.md # Este arquivo
 ```
 
