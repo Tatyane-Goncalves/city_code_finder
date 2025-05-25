@@ -1,6 +1,7 @@
 from cep import CEP
 from validator import ValidatorCEP
 from api_client import APIClient
+from address import Address
 
 def main():
   raw_cep = input("Digite o CEP: ")
@@ -16,11 +17,9 @@ def main():
   dados = APIClient.find_address(cep_obj.number)
 
   if dados:
-    print("📍 Endereço encontrado:")
-    print(f"Logradouro: {dados.get('logradouro', 'Não informado')}")
-    print(f"Bairro: {dados.get('bairro', 'Não informado')}")
-    print(f"Cidade: {dados.get('localidade', 'Não informado')}")
-    print(f"Estado: {dados.get('uf', 'Não informado')}")
+    show_address = Address.from_dict(dados)
+    print("📦 Endereço encontrado:")
+    print(show_address)
   else:
     print("❌ Não foi possível obter o endereço.")
 
