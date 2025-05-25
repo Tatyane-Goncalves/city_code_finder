@@ -1,6 +1,6 @@
 class CEP:
   def __init__(self, number: str):
-    self.number = self._clean(number)
+    self.number = self._clean(str(number))
 
   def _clean(self, value: str) -> str:
     # Remove qualquer caractere que não seja número
